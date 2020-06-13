@@ -138,7 +138,7 @@ main {
     }
 
     .navbar-nav {
-        
+        flex-direction: row;
     }
 
     .nav-link {
