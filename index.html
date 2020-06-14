@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!--Link to CSS file-->
         <link rel="stylesheet" href="stylesheet.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <!--This section is for the responsive web design part-->
+        <!--Link to JS file-->
+        <script src="script.js"></script>
+
+        <!--Navigation bar-->
         <nav class="navbar">
             <ul class="navbar-nav">
                   <li class="logo">
@@ -38,7 +41,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link" onclick="myFunction()">
                       <svg
                         aria-hidden="true"
                         focusable="false"
@@ -60,6 +63,7 @@
                       <span class="link-text">Link</span>
                     </a>
                   </li>
+
                   <li class="nav-item">
                     <a href="#" class="nav-link">
                       <svg
@@ -288,10 +292,11 @@
             </ul>
         </nav>
 
+        <!--Page Content-->
         <main>
             <h1>Csaba Darazs</h1>
             <i class="fa fa-spinner" aria-hidden="true">what</i>
-            <p>Welcome to my portfolio.</p>
+            <p id="mainfield">Welcome to my portfolio.</p>
         </main>
     </body>
 </html>
