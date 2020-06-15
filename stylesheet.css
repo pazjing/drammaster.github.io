@@ -219,3 +219,9 @@ main {
   .solar #solarIcon {
     display: block;
   }
+
+
+
+#mainfield {
+    background-color: grey;
+}
