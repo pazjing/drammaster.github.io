@@ -15,3 +15,8 @@ function changeRandomColor () {
     document.getElementById("mainfield").innerHTML = "It works tho";
     document.getElementById("mainfield").innerHTML = newHex;
 }
+
+function changeBackgroundColor () {
+    var main = document.querySelector("main");
+    main.style.backgroundColor = "#"+(Math.random()*0xFFFFFF<<0).toString(16);
+}
