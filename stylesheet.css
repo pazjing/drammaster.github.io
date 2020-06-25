@@ -32,6 +32,17 @@ main {
     padding: 1rem;
 }
 
+#coloring {
+    /*visibility: hidden;*/
+    filter: opacity(0);
+    transition: var(--transition-speed);
+}
+
+#coloring:hover {
+    filter: opacity(1);
+    transition: var(--transition-speed);
+}
+
 .navbar {
     position: fixed;
     background-color: var(--bg-primary);
@@ -243,4 +254,5 @@ main {
 
 #mainfield {
     background-color: grey;
+    visibility: unset;
 }
