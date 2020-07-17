@@ -15,8 +15,21 @@ body {
     background-color: white;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+    background: red;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6649b8;
+}
+
+header {
+    margin-left: 5rem;
+    padding: 1rem;
 }
 
 main {
@@ -103,6 +116,15 @@ main {
     transition: var(--transition-speed);
 }
 
+#aboutme {
+    margin: auto;
+
+}
+
+.container {
+    width: 550px;
+}
+
 @media only screen and (max-width: 600px) {
     .navbar {
         bottom: 0;
@@ -128,6 +150,10 @@ main {
 
     .nav-link {
         justify-content: center;
+    }
+
+    header {
+        margin: 0;
     }
 
     main {
