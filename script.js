@@ -22,5 +22,11 @@ function changeBackgroundColor () {
 }
 
 function darkMode () {
-    
+
+}
+
+function changePage () {
+    document.querySelector("#aboutme").style.margin = "0 0 0 -900px;";
+    var thing = document.querySelector("#python");
+    thing.style.margin = "0 0 0 0px";
 }

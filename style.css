@@ -117,8 +117,11 @@ main {
 }
 
 #aboutme {
-    margin: auto;
+    margin: 0 0 0 0px;
+}
 
+#python {
+    margin: 0 0 0 -900px;
 }
 
 .container {
