@@ -118,10 +118,15 @@ main {
 
 #aboutme {
     margin: 0 0 0 0px;
+    position: fixed;
 }
 
-#python {
+#python,
+#javaScript,
+#handCss,
+#reactNative {
     margin: 0 0 0 -900px;
+    position: fixed;
 }
 
 .container {
