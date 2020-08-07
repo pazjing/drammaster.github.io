@@ -41,6 +41,7 @@ main {
     position: fixed;
     background-color: var(--bg-primary);
     transition: width 200ms ease;
+    z-index: 1;
 }
 
 .navbar-nav {
@@ -57,9 +58,6 @@ main {
     width: 100%;
 }
 
-.nav-item:last-child {
-    margin-top: auto;
-}
 
 .nav-link {
     display: flex;
@@ -72,7 +70,7 @@ main {
 }
 
 .nav-link:hover {
-    filter: grayscale(0%) opacity(1);
+    filter: grayscale(0%) opacity(2);
     background: var(--bg-secondary);
     color: var(--text-secondary);
 }
@@ -90,6 +88,10 @@ main {
 
 .navbar:hover {
     width: 16rem;
+}
+
+.navbar:hover .container {
+    opacity: 0;
 }
 
 .navbar:hover .link-text {
@@ -119,6 +121,7 @@ main {
 #aboutme {
     margin: 0 0 0 0px;
     position: fixed;
+    transition: ease-out var(--transition-speed);
 }
 
 #python,
@@ -127,13 +130,19 @@ main {
 #reactNative {
     margin: 0 0 0 -900px;
     position: fixed;
+    transition: ease-out var(--transition-speed)
 }
 
 .container {
     width: 550px;
+    z-index: -1;
 }
 
 @media only screen and (max-width: 600px) {
+    body {
+        font-size: 1.5rem;
+    }
+
     .navbar {
         bottom: 0;
         width: 100vw;
