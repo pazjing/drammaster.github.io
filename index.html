@@ -3,6 +3,7 @@
     <head>
         <!--Link to CSS file-->
         <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8"/>
     </head>
     <body>
         <!--JS call-->
@@ -51,43 +52,47 @@
                 -->
             </ul>
         </nav>
+        <div id="wrapped">
+            <!--Title-->
+            <header>
+                <section id="header">
+                    <h1>Csaba Darazs</h1>
+                </section>
+            </header>
 
-        <!--Title-->
-        <header>
-            <section id="header">
-                <h1>Csaba Darazs</h1>
-            </section>
-        </header>
-
-        <!--Main content-->
-        <main>
-            <div id="aboutme">
-                <div class="container">
-                    A passionate computer science graduate from the University of Auckland with 4 years of experience working as a climbing instructer
-                     as part of a large team fulfilling various roles. With many years of university experience working with Python, SQL, HTML, CSS, JavaScript
-                      and C#, I am now looking to start my career in IT as a software developer or SalesForce developer.
+            <!--Main content-->
+            <main>
+                <div id="aboutme">
+                    <div class="container">
+                        A passionate computer science graduate from the University of Auckland with 4 years of experience working as a climbing instructer
+                        as part of a large team fulfilling various roles. With many years of university experience working with Python, SQL, HTML, CSS, JavaScript
+                        and C#, I am now looking to start my career in IT as a software developer or SalesForce developer.
+                    </div>
                 </div>
-            </div>
-            <div id="python">
-                <div class="container">
-                    Python coming Soon...
+                <div id="python">
+                    <div class="container">
+                        <ul id="python-list" onload="callGitHub('Python', 'python-list')">
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div id="javaScript">
-                <div class="container">
-                    JS coming Soon...
+                <div id="javaScript">
+                    <div class="container">
+                        JS coming Soon...
+                        <ul id="js-list" onload="callGitHub('JavaScript', 'js-list')">
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div id="reactNative">
-                <div class="container">
-                    RN Coming Soon...
+                <div id="reactNative">
+                    <div class="container">
+                        RN Coming Soon...
+                    </div>
                 </div>
-            </div>
-            <div id="handCss">
-                <div class="container">
-                    HTML & Css coming Soon...
+                <div id="handCss">
+                    <div class="container">
+                        HTML & Css coming Soon...
+                    </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
     </body>
 </html>

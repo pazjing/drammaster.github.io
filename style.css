@@ -1,5 +1,5 @@
 :root {
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: Arial, Helvetica, sans-serif;
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
@@ -90,8 +90,8 @@ main {
     width: 16rem;
 }
 
-.navbar:hover .container {
-    opacity: 0;
+.navbar:hover #wrapped {
+    background-color: black;
 }
 
 .navbar:hover .link-text {
@@ -138,7 +138,7 @@ main {
     z-index: -1;
 }
 
-@media (pointer:none), (pointer:coarse) {
+@media only screen and (max-width: 600px) {
     body {
         font-size: 1.5rem;
     }
@@ -181,8 +181,6 @@ main {
         width: 100%;
     }
 }
-
-
 
 @media only screen and (min-width: 600px) {
     .navbar {

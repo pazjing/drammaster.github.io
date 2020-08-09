@@ -14,14 +14,17 @@ function changePage (selected) {
     tochange.style.margin = "0 0 0 0px";
 }
 
-function callGitHub () {
+function callGitHub (pageName, id) {
     fetch("https://api.github.com/users/drammaster/repos")
         .then(response => {
             return response.json();
         })
         .then(repos => {
-            console.log(repos);
+            for(let i = 0; i < repos.length; i++) {
+                if(repos[i].language == pageName) {
+                    document.getElementById(id).innerHTML += '<li>' + repos[i].name + '</li>';
+                    console.log(repos[i].language);
+                }
+            }
         });
 }
-
-callGitHub();
