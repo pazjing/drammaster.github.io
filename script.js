@@ -21,10 +21,18 @@ function callGitHub (pageName, id) {
         })
         .then(repos => {
             for(let i = 0; i < repos.length; i++) {
-                if(repos[i].language == pageName) {
-                    document.getElementById(id).innerHTML += '<li>' + repos[i].name + '</li>';
-                    console.log(repos[i].language);
+                let rep = repos[i].name.split("-")
+                console.log(pageName)
+                console.log(rep[1])
+                if(rep[1] == pageName) {
+                    console.log("this is fine")
+                    document.getElementById(id).innerHTML += '<li>' + rep[0] + '</li>';
                 }
             }
         });
 }
+
+callGitHub('Python', 'python-list');
+callGitHub('JavaScript', 'js-list');
+callGitHub('ReactNative', 'reactnative-list');
+callGitHub('HTMLCSS', 'htmlcss-list');
