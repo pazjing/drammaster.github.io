@@ -22,11 +22,9 @@ function callGitHub (pageName, id) {
         .then(repos => {
             for(let i = 0; i < repos.length; i++) {
                 let rep = repos[i].name.split("-")
-                console.log(pageName)
-                console.log(rep[1])
+                let linker = "https://github.com/Drammaster/" + rep[0]
                 if(rep[1] == pageName) {
-                    console.log("this is fine")
-                    document.getElementById(id).innerHTML += '<li>' + rep[0] + '</li>';
+                    document.getElementById(id).innerHTML += '<li class="repo_item">' + '<container>' + '<p>Name: ' + '<a target="_blank" href=' + linker + ' >' + rep[0] + '</a>' + '</p><p>Language: ' + rep[1] + '</p></container>' + '</li>';
                 }
             }
         });
