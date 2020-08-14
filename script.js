@@ -14,7 +14,8 @@ function changePage (selected) {
     tochange.style.margin = "0 0 0 0px";
 }
 
-function callGitHub (pageName, id) {
+/*Github Repo call*/
+function callGitHub () {
     fetch("https://api.github.com/users/drammaster/repos")
         .then(response => {
             return response.json();
@@ -23,14 +24,9 @@ function callGitHub (pageName, id) {
             for(let i = 0; i < repos.length; i++) {
                 let rep = repos[i].name.split("-")
                 let linker = "https://github.com/Drammaster/" + rep[0]
-                if(rep[1] == pageName) {
-                    document.getElementById(id).innerHTML += '<li class="repo_item">' + '<container>' + '<p>Name: ' + '<a target="_blank" href=' + linker + ' >' + rep[0] + '</a>' + '</p><p>Language: ' + rep[1] + '</p></container>' + '</li>';
-                }
+                document.getElementById("repo-list").innerHTML += '<li class="repo_item">' + '<container>' + '<p>Name: ' + '<a target="_blank" href=' + linker + ' >' + rep[0] + '</a>' + '</p><p>Language: ' + rep[1] + '</p></container>' + '</li>';
             }
         });
 }
 
-callGitHub('Python', 'python-list');
-callGitHub('JavaScript', 'js-list');
-callGitHub('ReactNative', 'reactnative-list');
-callGitHub('HTMLCSS', 'htmlcss-list');
+callGitHub();
