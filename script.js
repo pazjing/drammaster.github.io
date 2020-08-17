@@ -23,8 +23,8 @@ function callGitHub () {
         .then(repos => {
             for(let i = 0; i < repos.length; i++) {
                 let rep = repos[i].name.split("-")
-                let linker = "https://github.com/Drammaster/" + rep[0]
-                document.getElementById("repo-list").innerHTML += '<li class="repo_item">' + '<container>' + '<p>Name: ' + '<a target="_blank" href=' + linker + ' >' + rep[0] + '</a>' + '</p><p>Language: ' + rep[1] + '</p></container>' + '</li>';
+                let linker = "https://github.com/Drammaster/" + repos[i].name
+                document.getElementById("repo-list").innerHTML += '<li class="repo_item">' + '<a target="_blank" href=' + linker + ' >' + '<container>' + '<h3>' + rep[0] + '</h3><p class="c-lang">' + rep[1] + '</p><p>' + repos[i].description + '</p></container>' + '</a>' + '</li>';
             }
         });
 }

@@ -15,12 +15,18 @@ body {
     background-color: white;
 }
 
-header {
+#head-content {
     display: grid;
     place-items: center;
     font-size: 50px;
-    height: 50vh;
-    background-color: rgb(167, 164, 164);
+    height: 100vh;
+    background-image: url(4K-Tech-Background.jpg);
+    background-size: cover;
+}
+
+#head-content h1 {
+    color: white;
+    z-index: 3;
 }
 
 .button {
@@ -32,9 +38,28 @@ header {
     transition: .5s ease all;
 }
 
+.button:hover {
+    color:#217dbb;
+    text-decoration:none;
+    background:#eee;
+}
+
 header a {
     text-decoration: none;
     font-size: 16px;
+    z-index: 2;
+}
+
+#overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(33,125,187,0.8);
+    z-index: 0;
 }
 
 main {
@@ -44,12 +69,19 @@ main {
 
 #aboutme,
 #tools,
-#proj {
+#proj,
+#skills {
     width: 98.4%;
     padding: 75px 15px;
     border-bottom: 1px solid #dcd9d9;
     display: flex;
     justify-content: center;
+    background-color: #f2f2f5;
+}
+
+#proj,
+#aboutme {
+    background-color: #ffffff;
 }
 
 #repo-list {
@@ -65,14 +97,48 @@ main {
 }
 
 .repo_item {
-    flex: 0 1 300px;
+    flex: 1 1 300px;
     list-style-type: none;
     margin: 5px;
     padding: 10px;
-    border:8px outset #999;
-    border-radius: 25px;
-    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
-    -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    background-color: #f2f2f5;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.repo_item:hover {
+
+}
+
+.repo_item a {
+    text-decoration: none;
+    color: black;
+}
+
+.c-lang {
+    display: inline-block;
+    margin: 7px;
+    padding: 5px 10px;
+    color: #ffffff;
+    background: #0288D1;
+    list-style: none;
+    font-size: 1.2em;
+}
+
+#tools h2 {
+    text-align: center;
+}
+
+#tools-list li {
+    display: inline-block;
+    margin: 7px;
+    padding: 5px 10px;
+    color: #374054;
+    background: #e4e4ea;
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em;
 }
 
 @media only screen and (max-width: 600px) {
