@@ -19,7 +19,7 @@ body {
     display: grid;
     place-items: center;
     font-size: 50px;
-    height: 100vh;
+    height: 22vh;
     background-image: url(4K-Tech-Background.jpg);
     background-size: cover;
 }
@@ -27,6 +27,8 @@ body {
 #head-content h1 {
     color: white;
     z-index: 3;
+    margin-top: 2px;
+    margin-bottom: 0px;
 }
 
 .button {
@@ -52,7 +54,7 @@ header a {
 
 #overlay {
     position: absolute;
-    height: 100vh;
+    height: 22vh;
     width: 100%;
     top: 0;
     right: 0;
@@ -64,23 +66,16 @@ header a {
 
 main {
     display: grid;
-    place-items: center;
+    grid-template-columns: 75% 25%;
 }
 
 #aboutme,
-#tools,
-#proj,
-#skills {
-    width: 98.4%;
+#proj {
+    width: 100%;
     padding: 75px 15px;
     border-bottom: 1px solid #dcd9d9;
     display: grid;
     justify-content: center;
-    background-color: #f2f2f5;
-}
-
-#proj,
-#aboutme {
     background-color: #ffffff;
 }
 
@@ -131,8 +126,6 @@ main {
     border-radius: 25px;
 }
 
-#tools h2,
-#skills h2,
 #proj h2,
 #aboutme h2 {
     text-align: center;
