@@ -1,5 +1,5 @@
 :root {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: Arial, Helvetica, sans-serif;
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
@@ -99,10 +99,11 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: 0;
 }
 
 .repo_item {
-    flex: 1 1 300px;
+    flex: 1 1 200px;
     list-style-type: none;
     margin: 5px;
     padding: 10px;
@@ -114,7 +115,8 @@ main {
 }
 
 .repo_item svg {
-    width: 50px;
+    width: 30px;
+    padding-top: 3px;
 }
 
 .repo_item:hover {
@@ -156,7 +158,7 @@ main {
 
 #skills-list{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 80%;
     justify-content: center;
 }
 
@@ -164,7 +166,7 @@ main {
     display: inline-block;
     margin: 7px;
     color: #ffffff;
-    background: #ffffff;
+    background-color: #5bc0de;
     list-style: none;
     cursor: default;
     font-size: 12px;
@@ -186,19 +188,9 @@ main {
 .filler-nodejs,
 .filler-python,
 .filler-sql {
-    background-color: #5cb85c;
     padding: 0;
     margin: 0;
-}
-
-.filler-reactnative,
-.filler-js {
-    background-color: #f0ad4e;
-}
-
-.filler-python,
-.filler-sql {
-    background-color: #5bc0de;
+    background-color: #0288D1;
 }
 
 .val {
@@ -237,9 +229,10 @@ main {
     #abouttext {
         padding: 0px 1rem;
     }
+    
 }
 
-@media only screen and (max-width: 755px) {
+@media only screen and (max-width: 760px) {
     :root {
         font-size: 10px;
     }
