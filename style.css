@@ -154,19 +154,10 @@ main {
     margin-left: 10px;
 }
 
-#skills-list,
-#tools-list {
+#skills-list{
     display: grid;
-}
-
-#skills-list {
     grid-template-columns: 50% 50%;
     justify-content: center;
-}
-
-#tools-list {
-    grid-template-columns: 70%;
-    justify-content: left;
 }
 
 #skills-list li {
@@ -181,6 +172,7 @@ main {
     line-height: 35px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    overflow: hidden;
 }
 
 #skills-list li span {
@@ -214,6 +206,12 @@ main {
     padding-right: 5px;
 }
 
+#tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 #tools-list li {
     display: inline-block;
     padding: 5px 10px;
@@ -223,13 +221,6 @@ main {
     cursor: default;
     font-size: 1em;
     margin: 1px;
-    width: 175px;
-}
-
-#tools-list svg {
-    width: 15px;
-    color: #fff;
-    float: right;
 }
 
 @media only screen and (max-width: 600px) {
