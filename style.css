@@ -101,7 +101,7 @@ main {
 
 #proj h2,
 #aboutme h2 {
-    text-align: center; 
+    text-align: center;
 }
 
 #abouttext {
@@ -117,7 +117,7 @@ main {
 }
 
 .repo_item {
-    flex: 1 1 250px;
+    flex: 1 1 300px;
     list-style-type: none;
     margin: 5px;
     padding: 10px;
@@ -128,9 +128,18 @@ main {
     transition: var(--transition-speed);
 }
 
+.repo_item h3 {
+    margin-top: 0;
+}
+
 .repo_item svg {
     width: 30px;
     padding-top: 3px;
+    float: right;
+}
+
+.repo_item p {
+    margin-top: 5px;
 }
 
 .repo_item:hover {
@@ -143,19 +152,8 @@ main {
     color: black;
 }
 
-.c-lang {
-    display: inline-block;
-    margin: 7px;
-    padding: 5px 10px;
-    color: #ffffff;
-    background: #0288D1;
-    list-style: none;
-    font-size: 1.2em;
-    border-radius: 25px;
-}
-
 #skill-tool {
-    margin: 0px 5.5%;
+    margin: 0px 5.5% 20px 5.5%;
     display: grid;
     grid-template-columns: 49.65% 49.65%;
     justify-content: space-between;
@@ -164,6 +162,7 @@ main {
 /*Right side content*/
 #skills,
 #tools {
+    width: 100%;
     background-color: #f2f2f5;
 }
 
@@ -177,12 +176,15 @@ main {
 }
 
 #skills-list{
-    display: grid;
-    grid-template-columns: 40% 40%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    padding-left: 0;
+    margin: 0px 10px;
 }
 
 #skills-list li {
+    flex: 1 1 32%;
     display: inline-block;
     margin: 7px;
     color: #ffffff;
@@ -222,6 +224,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: 0;
 }
 
 #tools-list li {
@@ -245,6 +248,9 @@ main {
         padding: 0px 5%;
     }
     
+    #skills-list {
+        grid-template-columns: 45% 45%;
+    }
 }
 
 @media only screen and (max-width: 760px) {
@@ -254,5 +260,9 @@ main {
 
     #head-content h1 {
         font-size: 10vw;
+    }
+    
+    #skills-list {
+        grid-template-columns: 90%;
     }
 }

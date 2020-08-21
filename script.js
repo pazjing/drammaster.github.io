@@ -42,8 +42,7 @@ function callGitHub () {
                     '<li class="repo_item">' + 
                         '<a target="_blank" href=' + linker + ' >' + 
                             '<container>' + 
-                                '<h3>' + rep[0] + '</h3>' + 
-                                '<p class="c-lang">' + svg_ins + '</p>' + 
+                                '<h3>' + rep[0] + svg_ins + '</h3>' + 
                                 '<p>' + repos[i].description + '</p>' + 
                             '</container>' + 
                         '</a>' + 
