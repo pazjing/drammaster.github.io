@@ -38,7 +38,16 @@ function callGitHub () {
                     svg_ins = svg_react;
                 }
                 let linker = "https://github.com/Drammaster/" + repos[i].name
-                document.getElementById("repo-list").innerHTML += '<li class="repo_item">' + '<a target="_blank" href=' + linker + ' >' + '<container>' + '<h3>' + rep[0] + '</h3><p class="c-lang">' + svg_ins + '</p><p>' + repos[i].description + '</p></container>' + '</a>' + '</li>';
+                document.getElementById("repo-list").innerHTML +=
+                    '<li class="repo_item">' + 
+                        '<a target="_blank" href=' + linker + ' >' + 
+                            '<container>' + 
+                                '<h3>' + rep[0] + '</h3>' + 
+                                '<p class="c-lang">' + svg_ins + '</p>' + 
+                                '<p>' + repos[i].description + '</p>' + 
+                            '</container>' + 
+                        '</a>' + 
+                    '</li>';
             }
         });
 }
