@@ -1,10 +1,9 @@
 :root {
     font-size: 16px;
     font-weight: Arial, Helvetica, sans-serif;
-    --text-primary: #b6b6b6;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
+    --light-grey: #f2f2f5;
+    --darker-grey: #666666;
+    --light-blue: rgba(33,125,187,0.8);
     --transition-speed: 600ms;
 }
 
@@ -29,7 +28,7 @@ header {
     display: grid;
     place-items: center;
     font-size: 50px;
-    height: 22vh;
+    height: auto;
     background-image: url(4K-Tech-Background.jpg);
     background-size: cover;
 }
@@ -54,6 +53,7 @@ header a {
     border: 3px solid #fff;
     border-radius: 30px;
     transition: .5s ease all;
+    margin-bottom: 5px;
 }
 
 .button:hover {
@@ -64,13 +64,13 @@ header a {
 
 #overlay {
     position: absolute;
-    height: 22vh;
+    height: 100%;
     width: 100%;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(33,125,187,0.8);
+    background: var(--light-blue);
     z-index: 0;
 }
 
@@ -121,7 +121,7 @@ main {
     list-style-type: none;
     margin: 5px;
     padding: 10px;
-    background-color: #f2f2f5;
+    background-color: var(--light-grey);
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -186,7 +186,7 @@ main {
     margin: 7px;
     color: #ffffff;
     background-color: #5bc0de;
-    background-color: #cacaca;
+    background-color: var(--light-grey);
     list-style: none;
     cursor: default;
     font-size: 12px;
@@ -217,31 +217,12 @@ main {
     padding: 0;
     margin: 0;
     background-color: #0288D1;
-    background-color: #666666;
+    background-color: var(--light-blue);
 }
 
 .val {
     float: right;
     padding-right: 5px;
-}
-
-#tools-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-left: 0;
-}
-
-#tools-list li {
-    display: inline-block;
-    padding: 5px 10px;
-    color: #FFF;
-    background: #0288D1;
-    background: #666666;
-    list-style: none;
-    cursor: default;
-    font-size: 1em;
-    margin: 1px;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -270,7 +251,11 @@ main {
     }
 
     #head-content h1 {
-        font-size: 10vw;
+        font-size: 9vw;
+    }
+
+    #head-content a {
+        font-size: 10px;
     }
 
     .repo_item svg {
@@ -279,5 +264,12 @@ main {
 
     .repo_item {
         margin: 5px 0px;
+    }
+
+    #skills-list li {
+        font-size: 10px;
+        margin: 4px;
+        height: 25px;
+        line-height: 25px;
     }
 }
