@@ -78,7 +78,7 @@ header a {
 
 
 main {
-    top: 22vh;
+    top: 175px;
     position: relative;
     display: grid;
     grid-template-columns: 100%;
