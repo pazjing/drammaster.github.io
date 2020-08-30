@@ -34,9 +34,9 @@ function callGitHub () {
                     svg_ins = svg_python;
                 } else if (rep[1] == "HTMLCSS") {
                     svg_ins = svg_html;
-                } else if (rep[1] = "ReactNative") {
+                } else if (rep[1] == "ReactNative" || rep[1] == "React") {
                     svg_ins = svg_react;
-                } else if (rep[1] = "JS") {
+                } else if (rep[1] == "JS") {
                     svg_ins = svg_js;
                 }
                 let linker = "https://github.com/Drammaster/" + repos[i].name
