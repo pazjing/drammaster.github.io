@@ -13,7 +13,6 @@ body {
     color: black;
     background-color: white;
 }
-
 /*Header section*/
 
 header {
@@ -117,7 +116,7 @@ main {
 }
 
 .repo_item {
-    flex: 1 1 300px;
+    flex: 1 1 290px;
     list-style-type: none;
     margin: 5px;
     padding: 10px;
@@ -159,7 +158,7 @@ main {
     justify-content: space-between;
 }
 
-/*Right side content*/
+/*Tools and skills*/
 #skills,
 #tools {
     width: 100%;
@@ -181,48 +180,19 @@ main {
 }
 
 #skills-list li {
-    flex: 1 1 20%;
+    text-align: center;
+    flex: 0 1 auto;
     display: inline-block;
-    margin: 7px;
+    margin: 5px;
     color: #ffffff;
-    background-color: #5bc0de;
-    background-color: var(--light-grey);
+    background-color: var(--light-blue);
     list-style: none;
     cursor: default;
     font-size: 12px;
-    height: 35px;
-    line-height: 35px;
+    padding: 6px;
     text-transform: uppercase;
     letter-spacing: 1px;
     overflow: hidden;
-}
-
-#skills-list li span {
-    padding-left: 5px;
-}
-
-.filler-js,
-.filler-css,
-.filler-html,
-.filler-reactnative,
-.filler-nodejs,
-.filler-python,
-.filler-sql,
-.filler-jira,
-.filler-vscode,
-.filler-trello,
-.filler-framer,
-.filler-github,
-.filler-androidstudio {
-    padding: 0;
-    margin: 0;
-    background-color: #0288D1;
-    background-color: var(--light-blue);
-}
-
-.val {
-    float: right;
-    padding-right: 5px;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -256,6 +226,10 @@ main {
 
     #head-content a {
         font-size: 10px;
+    }
+
+    main {
+        top: 100px;
     }
 
     .repo_item svg {
