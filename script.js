@@ -20,9 +20,14 @@ function changePage (selected) {
     tochange.style.margin = "0 0 0 0px";
 }
 
+function visitorCount () {
+    fetch('https://api.countapi.xyz/update/drammaster.co.nz/visits/?amount=1')
+        .then(response => response.json());
+}
+
 /*Github Repo call*/
 function callGitHub () {
-    fetch("https://api.github.com/users/drammaster/repos")
+    fetch('https://api.github.com/users/drammaster/repos')
         .then(response => {
             return response.json();
         })
@@ -55,4 +60,5 @@ function callGitHub () {
         });
 }
 
+visitorCount();
 callGitHub();
