@@ -4,7 +4,7 @@ var svg_html = '<svg aria-hidden="true" focusable="false" data-prefix="fab" data
 var svg_js = '<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="js-square" class="svg-inline--fa fa-js-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"></path></svg>'
 var svg_angular = '<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="angular" class="svg-inline--fa fa-angular fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M185.7 268.1h76.2l-38.1-91.6-38.1 91.6zM223.8 32L16 106.4l31.8 275.7 176 97.9 176-97.9 31.8-275.7zM354 373.8h-48.6l-26.2-65.4H168.6l-26.2 65.4H93.7L223.8 81.5z"></path></svg>'
 
-/*Page changer function for single paged site*/
+// Page changer function for single paged site 
 function changePage (selected) {
     var python = document.querySelector("#python");
     var aboutme = document.querySelector("#aboutme");
@@ -20,12 +20,14 @@ function changePage (selected) {
     tochange.style.margin = "0 0 0 0px";
 }
 
+// This is a visit counter page
+// Visit https://api.countapi.xyz/get/drammaster.co.nz/visits for the current number of visits
 function visitorCount () {
     fetch('https://api.countapi.xyz/update/drammaster.co.nz/visits/?amount=1')
         .then(response => response.json());
 }
 
-/*Github Repo call*/
+// Github Repo call
 function callGitHub () {
     fetch('https://api.github.com/users/drammaster/repos')
         .then(response => {
