@@ -1,6 +1,6 @@
 :root {
     font-size: 16px;
-    font-family: Impact, Impact, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     --light-grey: #f2f2f5;
     --darker-grey: #666666;
     --light-blue: rgba(33,125,187,0.8);
@@ -33,6 +33,7 @@ header {
 }
 
 #head-content h1 {
+    font-family: Impact, Impact, sans-serif;
     color: white;
     z-index: 3;
     margin-top: 2px;
@@ -197,6 +198,14 @@ main {
 
 @media only screen and (max-width: 1300px) {
 
+    #head-content h1 {
+        font-size: 9vw;
+    }
+
+    .button {
+        padding: 15px 15px;
+    }
+
     main {
         grid-template-columns: 100%;
     }
@@ -217,11 +226,15 @@ main {
 
 @media only screen and (max-width: 760px) {
     :root {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     #head-content h1 {
-        font-size: 9vw;
+        font-size: 11vw;
+    }
+
+    .button {
+        padding: 15px 15px;
     }
 
     #head-content a {
